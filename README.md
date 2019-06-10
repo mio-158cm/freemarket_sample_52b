@@ -11,9 +11,8 @@
 |birthday_year|integer|null: false|
 |birthday_month|integer|null: false|
 |bithday_day|integer|null: false|
-|evaluation|integer|
 ### Association
--has_many :addresses
+-has_one :address
 -has_many :items
 -has_many :likes
 -has_many :comments
@@ -55,7 +54,7 @@
 |profit|integer|null: false|
 |status|integer|null: false|
 |user_id|references|null: false, foreign_key: true|
-|brand_id|references|null: false, foreign_key: true|
+|brand_id|references|foreign_key: true|
 |small_category_id|references|null: false, foreign_key: true|
 |size_id|references|foreign_key: true|
 
@@ -90,7 +89,7 @@
 |transaction_id|references|null: false,foreign_key: true|
 ### Association
 -belongs_to :user
--belongs_to :intansaction
+-belongs_to :tansaction
 
 
 ### transactions table
