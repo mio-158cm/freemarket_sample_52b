@@ -1,0 +1,34 @@
+.header
+  .header__inner
+    .header__inner__top
+      %h1
+        %a.title__logo{:href => ""}
+      %form.keyword__search{:action => "", :method => ""}
+        %input.keyword__search__box{:name => "keyword", :placeholder => "何かお探しですか？", :type => "text"}/
+        .keyword__search__button
+          %i.material-icons.search search
+    .header__inner__bottom
+      %nav.header__inner__bottom-left
+        %ul.header__inner__bottom-left__box
+          %li.header__inner__bottom-left__box__category
+            %a.category__link{:href => ""}
+              %i.material-icons.category format_list_bulleted
+              %span カテゴリーから探す
+          %li.header__inner__bottom-left__box__brand
+            %a.brand__link{:href => ""}
+              %i.material-icons.brand local_offer
+              %span ブランドから探す
+      .header__inner__bottom-right
+        %ul.header__inner__bottom-right__box
+          %li.header__inner__bottom-right__box__notice
+            %a.notice__link{:href => ""}
+              %i.far.fa-bell
+              %span お知らせ
+          %li.header__inner__bottom-right__box__list
+            %a.list__link{:href => ""}
+              %i.fas.fa-check
+              %span やることリスト
+          %li.header__inner__bottom-right__box__mypage
+            %a.mypage__link{:href => ""}
+              %i.fas.fa-user-circle
+              %span マイページ
