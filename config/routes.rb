@@ -8,6 +8,13 @@ Rails.application.routes.draw do
   get 'users/registration_payment' => 'users#registration_payment'
   get 'users/registration_completion' => 'users#registration_completion'
 
+  get 'credit/new'
+  get 'credit/index'
+  post 'credit/create' => 'credit#create'
+  post 'credit/pay'
+  # resources :credit, only: [:create ]
+  get 'credit/delete'
+  get 'credit/show'
   get 'users/edit'
   get 'users/show'
   get 'users/logout'
