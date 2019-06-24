@@ -14,6 +14,7 @@ class ItemsController < ApplicationController
     @item = Item.new
     @parents = Category.order("id ASC").limit(13)
     @address = Address.new
+    @sizes = Size.all
   end
 
   def create
@@ -48,6 +49,6 @@ class ItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:name, :detail, :condition, :shipping_cost, :delivery_date, :price, :brand_id)
+    params.require(:item).permit(:name, :detail, :condition, :shipping_cost, :delivery_date, :price, :brand_id, :size_id)
   end
 end
