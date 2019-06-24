@@ -38,7 +38,12 @@
                 = f.collection_select :category, @parents, :id, :name,{prompt: "---"}, class: "select-default", id: "parent-form", name: 'item[category_ids][]'
               .select-wrap
               .select-wrap2
-          .single-main__section__item--detail__pulldown__one
+          .single-main__section__item--detail__pulldown__one.hide__form
+            %label.normal-label サイズ
+            %span.form-require 必須
+            .single-main__section__item--detail__pulldown__one__tab
+              =f.collection_select :size_id, @sizes, :id, :name,{prompt: "---"},{class: 'select--booox', required:"required"}
+          .single-main__section__item--detail__pulldown__one.hide__form
             %label.normal-label ブランド
             %span.form-any 任意
             .single-main__section__item--detail__pulldown__one__tab
